@@ -1,0 +1,99 @@
+.error-boundary {
+  min-height: calc(100vh - 4rem);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.error-boundary-content {
+  max-width: 600px;
+  background: hsl(var(--card));
+  border: 1px solid hsl(var(--border));
+  border-radius: calc(var(--radius) + 4px);
+  padding: 2rem;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  text-align: center;
+}
+
+.error-boundary-content h1 {
+  color: hsl(var(--destructive));
+  margin-bottom: 1rem;
+  font-size: 1.875rem;
+}
+
+.error-boundary-content p {
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+}
+
+.error-details {
+  margin: 1.5rem 0;
+  text-align: left;
+  background: hsl(var(--muted) / 0.3);
+  border-radius: calc(var(--radius) - 2px);
+  padding: 1rem;
+}
+
+.error-details summary {
+  cursor: pointer;
+  font-weight: 500;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.5rem;
+}
+
+.error-details pre {
+  margin: 0;
+  font-size: 0.75rem;
+  color: hsl(var(--destructive));
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.error-button {
+  padding: 0.75rem 1.5rem;
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  border: none;
+  border-radius: calc(var(--radius) - 2px);
+  cursor: pointer;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  transition: all 0.2s;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+}
+
+.error-button:hover {
+  background-color: hsl(var(--primary) / 0.9);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.error-button.secondary {
+  background-color: hsl(var(--secondary));
+  color: hsl(var(--secondary-foreground));
+  border: 1px solid hsl(var(--border));
+}
+
+.error-button.secondary:hover {
+  background-color: hsl(var(--secondary) / 0.8);
+}
+
+@media (max-width: 640px) {
+  .error-actions {
+    flex-direction: column;
+  }
+  
+  .error-button {
+    width: 100%;
+  }
+}
+
