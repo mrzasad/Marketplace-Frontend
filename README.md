@@ -1,13 +1,11 @@
-### 1. Install Dependencies
+# 1. Install Dependencies
 Run the command:
 
-```bash
 npm install
 
-### 2. Start Development Server
+# 2. Start Development Server
 Run the command:
 
-```bash
 npm run dev
 
 # React + Vite
